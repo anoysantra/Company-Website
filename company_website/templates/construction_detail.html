@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Services</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            background-image: url('https://images.pexels.com/photos/190417/pexels-photo-190417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Replace 'your-background-image.jpg' with the actual image path */
+            background-size: cover; /* Ensure the background image covers the entire viewport */
+            background-position: center;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .service-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 20px;
+            {% comment %} text-align: center; {% endcomment %}
+        }
+
+        .service-box a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .service-box:hover {
+            background-color: #f0f0f0;
+        }
+
+        ul {
+            {% comment %} list-style-type: none; {% endcomment %}
+            padding: 0;
+            margin-left: 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Construction Services</h1>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>   
+        <a href="{% url 'contact_us' %}">Contact Us</a> 
+    </nav>
+
+    <section>
+        <!-- Construction Services -->
+        <div class="service-box">
+           
+                <h2>Construction</h2>
+                <ul>
+                    <li>Residential Construction</li>
+                    <li>Commercial Construction</li>
+                    <li>Home Construction</li>
+                    <li>Addition of Floor</li>
+                    <li>House Construction</li>
+                    <li>Independent House Construction</li>
+                    <li>Luxury Home Construction</li>
+                    <li>Cost of New Home Construction</li>
+                    <li>Villa Construction</li>
+                    <li>Duplex Home Construction</li>
+                    <li>Farm House Construction</li>
+
+                    <!-- Add more items as needed -->
+                </ul>
+            </a>
+        </div>
+
+        <!-- Renovation Services -->
+        <div class="service-box">
+           
+                <h2>Renovation</h2>
+                <ul>
+                    <li>Full Home Renovation</li>
+                    <li>Commercial Renovation</li>
+                    <li>Tiling</li>
+                    <li>Masonary</li>
+                    <li>False Ceiling</li>
+                    <li>Painting</li>
+                    <li>Bathroom Renovation</li>
+                    <li>Kitchen Renovation</li>
+                    <li>Extension of Areas</li>
+                    <li>Addition Of Floor</li>
+                    <li>Bathroom Renovation</li>
+                    <li>Living Room Renovation</li>
+                    <li>Bed-Room Renovation</li>
+
+
+                    <!-- Add more items as needed -->
+                </ul>
+            </a>
+        </div>
+
+        <!-- Interior Design Services -->
+        <div class="service-box">
+            
+                <h2>Interior Design</h2>
+                <ul>
+                    <li>Residential Interior Design</li>
+                    <li>Living Room Interior Design</li>
+                    <li>Kitchen Interior Design</li>
+                    <li>Bathroom Interior Design</li>
+                    <li>Bedroom Interior Design</li>
+                    <li>Office Interior Design</li>
+                    <li>Commercial Interior Design</li>
+                    <li>Apartment Interior Design</li>
+                    <!-- Add more items as needed -->
+                </ul>
+            </a>
+        </div>
+
+        <!-- Hyderabad Services -->
+        <div class="service-box">
+           
+                <h2>Hyderabad Services</h2>
+                <ul>
+                    <li>Residential Construction</li>
+                    <li>Commercial Construction</li>
+                    <li>Home Construction</li>
+                    <li>Addition of Floor</li>
+                    <li>Villa Construction</li>
+                    <li>Duplex Home Construction</li>
+                    <li>Farm House Construction</li>
+                    <li>Modern Home Construction</li>
+
+                    <!-- Add more items as needed -->
+                </ul>
+            </a>
+        </div>
+
+        <!-- Andhra Pradesh Services -->
+        <div class="service-box">
+           
+                <h2>Andhra Pradesh Services</h2>
+                <ul>
+                    <li>Residential Construction</li>
+                    <li>Commercial Construction</li>
+                    <li>Home Construction</li>
+                    <li>Addition of Floor</li>
+                    <li>Villa Construction</li>
+                    <li>Duplex Home Construction</li>
+                    <li>Farm House Construction</li>
+                    <li>Modern Home Construction</li>
+                    <!-- Add more items as needed -->
+                </ul>
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>

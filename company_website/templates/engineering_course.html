@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Courses</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #B4B4B3;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        /* Styling for Courses */
+        .course-category {
+            margin-bottom: 20px;
+        }
+
+        .course-category h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .course-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .course-item {
+            background-color: #fff;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-item:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Engineering Courses</h1>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        
+        
+        </div>
+        <a href="{% url 'contact_us' %}">Contact</a>
+    </nav>
+
+    <section>
+        <!-- Mechanical Engineering Courses -->
+        <div class="course-category">
+            <h3>Mechanical Engineering Courses</h3>
+            <ul class="course-list">
+                <li class="course-item">1. Design Engineer Course</li>
+                <ul>
+                    <li>AutoCAD Design Engineer Course</li>
+                    <li>3D Modelling using Blender</li>
+                </ul>
+                <li class="course-item">2. HVAC Technologies</li>
+                <ul>
+                    <li>HVAC Training for Mechanical Engineers</li>
+                </ul>
+                <li class="course-item">3. MEP Course</li>
+                <li class="course-item">4. Welding and Fabrication</li>
+                <li class="course-item">5. Piping Engineer Course</li>
+            </ul>
+        </div>
+
+        <!-- Electrical Engineering Courses -->
+        <div class="course-category">
+            <h3>Electrical Engineering Courses</h3>
+            <ul class="course-list">
+                <li class="course-item">1. Power Plant Technologies</li>
+                <li class="course-item">2. Electrical Design Course</li>
+                <li class="course-item">3. Substations & Switch-yards</li>
+                <li class="course-item">4. Electrical Safety Engineer Course</li>
+            </ul>
+        </div>
+
+        <!-- Civil Engineering Courses -->
+        <div class="course-category">
+            <h3>Civil Engineering Courses</h3>
+            <ul class="course-list">
+                <li class="course-item">1. Structures and Design Course</li>
+                <li class="course-item">2. Transportation Engineering Course</li>
+                <li class="course-item">3. Irrigation Engineering Course</li>
+                <li class="course-item">4. Building Construction Course</li>
+                <li class="course-item">5. Costing and Estimation Course</li>
+            </ul>
+        </div>
+
+        <!-- Supply Chain Management Training -->
+        <div class="course-category">
+            <h3>Supply Chain Management Training for B.Tech/MBA Graduates</h3>
+            <p>
+                Ushasri offers the best of the management training for all engineering disciplines. Our specialty courses include Engineering Management Course, Supply Chain Management, and Project Management Training. We also offer the following courses for graduate engineers and management professionals. All these courses are classroom training modules. It includes teaching by faculty, audio visuals, projects, and case studies.
+            </p>
+            <ul class="course-list">
+                <li class="course-item"><a href="https://supplychain.pertecnica.in/logistics-executive-training/" >Logistics Executive Training</a></li>
+                <li class="course-item"><a href="https://supplychain.pertecnica.in/export-imports-management-training/" class="option">Imports & Exports Training</a></li>
+                <li class="course-item"><a href="https://supplychain.pertecnica.in/warehousing-management-training/" class="option">Warehouse Management</a></li>
+                <li class="course-item"><a href="https://supplychain.pertecnica.in/freight-forwarding-training/" class="option">Freight Forwarding Training</a></li>
+                <li class="course-item"><a href="https://supplychain.pertecnica.in/shipping-executive-training/" class="option">Shipping Executive Course</a></li>
+                <li class="course-item"><a href="https://supplychain.pertecnica.in/customs-clearance-executive-training/" class="option">Customs Clearance Executive Course</a></li>
+                <li class="course-item"><a href="" class="option">Ports – Management & Operations</a></li>
+            </ul>
+        </div>
+
+        <!-- Oil and Gas Training -->
+        <div class="course-category">
+            <h3>Oil and Gas Training – Industry Specific Job-oriented Courses</h3>
+            <p>
+                Oil and Gas Training covers Oil and Gas Exploration, Production, Utilities, Refineries, LNG Plants, Water Treatments, Power Plants, Air Separation Units, and Petrochemical Plants. Students/Engineers trained by us are working in the world’s best companies at Junior & Senior level positions. This course covers the complete project development and process technologies of the Petroleum, Oil and Gas industry with training on all major equipment.
+            </p>
+            <ul class="course-list">
+                <li class="course-item"><a href="https://www.pertecnica.in/petroleum-oil-and-gas-course-for-mechanical-engineers/" class="option">Oil and Gas Course for Mechanical Engineers</a></li>
+                <li class="course-item"><a href="https://pertecnica.in/petroleum-oil-and-gas-course-for-electrical-engineers/" class="option">Oil and Gas Course for Electrical Engineers</a></li>
+                <li class="course-item"><a href="https://pertecnica.in/petroleum-oil-and-gas-course-for-chemical-engineers/" class="option">Oil and Gas Course for Chemical Engineers</a></li>
+                <li class="course-item"><a href="https://pertecnica.in/oil-and-gas-course-for-electronics-and-instrumentation-engineers/" class="option">Oil and Gas Course for Instrumentation Engineers</a></li>
+            </ul>
+        </div>
+
+    </section>
+    <footer>
+        &copy; 2023 HCTPL. All rights reserved.
+    </footer>
+
+</body>
+</html>

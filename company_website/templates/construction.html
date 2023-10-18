@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCTPL - Construction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .dropdown {
+            display: inline-block;
+        }
+        
+        /* Dropdown button styling */
+        .dropbtn {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        /* Change color on hover */
+        .dropdown-content a:hover {
+            background-color: #f0f0f0;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+        * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333; /* Add your desired background color */
+    color: #fff; /* Add your desired text color */
+    text-align: center;
+    padding: 10px;
+}
+.info-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.info-box h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.info-box p {
+    margin: 0;
+}
+.why-choose-us {
+    background-color: #007bff;
+    color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.why-choose-us h2 {
+    margin-bottom: 20px;
+}
+
+.why-choose-us p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Our Construction Services</h1>
+        
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'construction_services' %}">Construction and Services</a>
+        <a href="{% url 'consultancy' %}">Book a Consultant</a>
+        <a href="{% url 'contact_us' %}">Contact Us</a>
+    </nav>
+    
+
+    <section>
+        <h2>Welcome to HCTPL Construction Services</h2>
+        <p>Introduction to HCTPL's Comprehensive Construction Services
+
+            Welcome to HCTPL Construction Services, where we offer a holistic approach to civil construction and building solutions. As a trusted name in the industry, we provide end-to-end services that encompass a wide range of categories to meet all your construction needs.
+        </p>
+    </section>
+    <section>
+        <div class="info-box">
+            <h2>Design and Planning Services</h2>
+            <p>At HCTPL, we understand that successful construction begins with thoughtful design and meticulous planning. Our team of skilled architects, engineers, and planners collaborate closely to transform your vision into reality. Our comprehensive design and planning services include:</p>
+            <ul>
+                <li>Architectural Design: Innovative architectural design that reflects your vision and goals.</li>
+                <li>Interior Design: Creating functional, aesthetically pleasing interior spaces.</li>
+                <li>Structural Engineering: Ensuring the stability and safety of your construction project.</li>
+                <li>Project Feasibility Studies: Comprehensive assessments to determine project viability.</li>
+                <li>3D Modeling and Visualization: Visualizing the project before construction begins.</li>
+                <li>Site Analysis and Evaluation: Thorough examination of the construction site.</li>
+                <li>Permit Acquisition: Handling permits and regulatory compliance.</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h2>Construction and Project Management</h2>
+            <p>We take pride in our hands-on approach to construction management. Our experienced project managers oversee every aspect of your project to ensure it's executed efficiently, on time, and within budget. Our comprehensive construction and project management services encompass:</p>
+            <ul>
+                <li>General Contracting: Overseeing construction from start to finish.</li>
+                <li>Quality Control and Assurance: Maintaining the highest construction standards.</li>
+                <li>Budget Estimation and Cost Control: Keeping your project on budget.</li>
+                <li>Subcontractor Coordination: Efficiently managing subcontractors.</li>
+                <li>Safety Compliance and Risk Management: Prioritizing safety on the job site.</li>
+                <li>Progress Monitoring and Reporting: Keeping you informed every step of the way.</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h2>Renovation and Remodeling</h2>
+            <p>For revitalizing existing structures, our renovation and remodeling team is here to transform your space. Our services include:</p>
+            <ul>
+                <li>Interior and Exterior Renovations: Enhancing aesthetics and functionality.</li>
+                <li>Space Planning and Optimization: Maximizing use of available space.</li>
+                <li>Structural Upgrades and Improvements: Modernizing and fortifying structures.</li>
+                <li>Energy-Efficient Retrofits: Reducing energy consumption and costs.</li>
+                <li>Historical Restoration and Preservation: Preserving architectural heritage.</li>
+            </ul>
+        </div>
+        <div class="info-box">
+            <h2>Infrastructure Development</h2>
+            <p>We play a pivotal role in enhancing community infrastructure. Our infrastructure development services include:</p>
+            <ul>
+                <li>Urban Planning and Development: Creating sustainable urban environments.</li>
+                <li>Public Parks and Recreation Areas: Enhancing community spaces.</li>
+                <li>Water Supply and Treatment Facilities: Providing safe drinking water.</li>
+                <li>Wastewater Treatment Plants: Managing waste responsibly.</li>
+                <li>Disaster Recovery and Rebuilding: Rebuilding communities after disasters.</li>
+                <li>Sustainable and Resilient Infrastructure Solutions: Building for the future.</li>
+            </ul>
+        </div>
+        <div class="info-box">
+            <h2>Maintenance and Facility Management</h2>
+            <p>Our commitment to your project doesn't end with construction. HCTPL offers comprehensive maintenance and facility management services to ensure the longevity and efficiency of your property. Our maintenance services include:</p>
+            <ul>
+                <li>Routine Inspections and Upkeep: Regular maintenance to prevent issues.</li>
+                <li>Repairs and Emergency Response: Promptly addressing unexpected problems.</li>
+                <li>Energy Efficiency Assessments: Enhancing energy performance.</li>
+                <li>Sustainability and Green Building Maintenance: Supporting eco-friendly practices.</li>
+                <li>Facility Upgrades and Modernization: Keeping facilities current and efficient.</li>
+            </ul>
+        </div>
+        <div class="info-box">
+            <h2>Graphic Design and Branding Services</h2>
+            <p>We understand the importance of visual communication in the construction industry. Our graphic design and branding services include:</p>
+            <ul>
+                <li>Logo and Brand Identity: Crafting a distinctive brand image.</li>
+                <li>Marketing Collateral: Designing brochures, flyers, and promotional materials.</li>
+                <li>Website Design: Creating a user-friendly, informative website.</li>
+                <li>Digital and Print Graphics: Eye-catching visuals for various platforms.</li>
+                <li>Signage and Wayfinding: Effective on-site communication.</li>
+                <li>Branding Strategy: Developing a cohesive branding strategy.</li>
+            </ul>
+        </div>
+        <div class="info-box">
+            <h2>Interior Design Services</h2>
+            <p>Our interior design services focus on creating functional, aesthetically pleasing spaces that meet your needs:</p>
+            <ul>
+                <li>Space Planning: Maximizing the utility of interior spaces.</li>
+                <li>Concept Development: Creating design concepts that align with your vision.</li>
+                <li>Material and Finish Selection: Choosing the right materials and finishes.</li>
+                <li>Furniture and Fixture Procurement: Sourcing and selecting furnishings.</li>
+                <li>Lighting Design: Enhancing ambiance and functionality.</li>
+                <li>Project Management: Overseeing the implementation of interior design plans.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <!-- ... Previous info boxes ... -->
+
+        <div class="why-choose-us">
+            <h2>Why choose Us?</h2>
+            <p>When you choose HCTPL Construction Services, you're choosing a partner dedicated to delivering excellence, innovation, and reliability in every aspect of civil construction. Contact us today to discuss your project and experience the difference that our end-to-end services can make. Our comprehensive offerings, including interior design and graphic design, ensure that your project receives the attention it deserves at every stage of development.</p>
+        </div>
+
+    </section>
+
+
+   
+    <footer>
+        &copy; 2023 HCTPL. All rights reserved.
+    </footer>
+   
+        
+</body>
+</html>

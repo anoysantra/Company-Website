@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Home Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            background-image: url('https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); 
+            background-size: cover; 
+            background-position: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: #ffd700;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        /* Styling for Placement Block */
+        .placement-block {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .placement-content {
+            margin-bottom: 30px;
+        }
+
+        .post-job-button,
+        .review-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .post-job-button:hover,
+        .review-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styling for Why Hire Section */
+        .why-hire {
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .why-hire h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .why-hire ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .why-hire li {
+            background-color: #f0f0f0;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .why-hire li:hover {
+            background-color: #e0e0e0;
+        }
+        .dropdown {
+            display: inline-block;
+        }
+        
+        /* Dropdown button styling */
+        .dropbtn {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        /* Change color on hover */
+        .dropdown-content a:hover {
+            background-color: #f0f0f0;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Placement & Services</h1>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+       
+        <div class="dropdown">
+            <button class="dropbtn">Courses</button>
+            <div class="dropdown-content">
+                <a href="{% url 'engineering_course' %}">Engineering Courses</a>
+                <a href="{% url 'software_course' %}">Software Courses</a>
+            </div>
+        </div>
+        <a href="{% url 'contact_us' %}">Contact Us</a>
+    </nav>
+
+    <section>
+        <!-- Placement Block -->
+        <div class="placement-block">
+            <div class="placement-content">
+                <h2>Hire Job Ready Professionals Faster</h2>
+                <p>Hire qualified trained freshers & experienced candidates. 24/7 support from HR team (this line after the first line).</p>
+            </div>
+            <a href="{% url 'post_job' %}" class="post-job-button">Post a Job</a>
+            <div class="why-hire">
+                <h2>Why Hire from Ushasri Technologies</h2>
+                <ul>
+                    <li>Already well trained in live projects with hands-on</li>
+                    <li>Hire candidates who have been trained from industry standards</li>
+                    <li>Ushasri Technologies certified professionals with excellent skills</li>
+                    <li>Hire candidates in various technologies: cloud, mobile, web, data science, mechanical engineering (HVAC, MEP, industrial, etc.), electrical engineering (power plant, emergency, industrial, petroleum, oil, etc.), civil engineering (structural, building, transportation, irrigation, water supply, AutoCAD, and so on, etc.).</li>
+                </ul>
+            </div>
+            <a href="{% url 'contact_us' %}" class="review-button">Write Us a Review</a>
+        </div>
+    </section>
+    <footer>
+        &copy; 2023 HCTPL. All rights reserved.
+    </footer>
+
+</body>
+</html>

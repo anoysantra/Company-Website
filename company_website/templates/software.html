@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Courses</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F1F0E8;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+        }
+        
+
+        /* Styling for Courses */
+        .course-category {
+            margin-bottom: 20px;
+        }
+
+        .course-category h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .course-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .course-item {
+            background-color: #fff;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-item:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Software Courses</h1>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+       
+        
+        </div>
+        <a href="{% url 'contact_us' %}">Contact Us</a>
+    </nav>
+
+    <section>
+        <!-- Software Courses -->
+        <div class="course-category">
+            <h3>1. Cloud Computing</h3>
+            <ul class="course-list">
+                <li class="course-item">AWS Certification Online Training</li>
+                <li class="course-item">AWS Certified DevOps Training</li>
+                <li class="course-item">Azure DevOps Training</li>
+                <li class="course-item">Salesforce Training</li>
+                <li class="course-item">Salesforce Developer Training</li>
+                <li class="course-item">Salesforce Administrator Training</li>
+            </ul>
+        </div>
+
+        <div class="course-category">
+            <h3>2. Data Science & AI</h3>
+            <ul class="course-list">
+                <li class="course-item">Machine Learning Training</li>
+                <li class="course-item">Data Science Training</li>
+                <li class="course-item">Machine Learning with Python Training</li>
+                <li class="course-item">Deep Learning Course</li>
+                <li class="course-item">Artificial Intelligence Course</li>
+            </ul>
+        </div>
+
+        <div class="course-category">
+            <h3>3. DevOps</h3>
+            <ul class="course-list">
+                <li class="course-item">Kubernetes Training</li>
+                <li class="course-item">Docker Certification Training</li>
+                <li class="course-item">DevOps Training</li>
+                <li class="course-item">Openstack Training</li>
+                <li class="course-item">Ansible Training</li>
+                <li class="course-item">Chef Certification Training</li>
+            </ul>
+        </div>
+
+        <div class="course-category">
+            <h3>4. Programming</h3>
+            <ul class="course-list">
+                <li class="course-item">Python Training Course</li>
+                <li class="course-item">JavaScript Training</li>
+                <li class="course-item">Unix Shell Scripting Training</li>
+                <li class="course-item">PHP Training</li>
+                <li class="course-item">Java Certification Training</li>
+                <li class="course-item">C and C++ Training</li>
+                <li class="course-item">R Programming</li>
+            </ul>
+        </div>
+
+        <div class="course-category">
+            <h3>5. Software Testing</h3>
+            <ul class="course-list">
+                <li class="course-item">Selenium Training</li>
+                <li class="course-item">Loadrunner Training</li>
+                <li class="course-item">JMeter Training</li>
+                <li class="course-item">Manual Testing Training</li>
+                <li class="course-item">SoapUI Training</li>
+                <li class="course-item">Coded UI Training</li>
+                <li class="course-item">ETL Testing Training</li>
+                <li class="course-item">Big Data Testing Training</li>
+            </ul>
+        </div>
+
+        <div class="course-category">
+            <h3>6. Web Designing</h3>
+            <ul class="course-list">
+                <li class="course-item">Angular Training</li>
+                <li class="course-item">Node.js Training</li>
+                <li class="course-item">MEAN Stack Training</li>
+                <li class="course-item">HTML Training</li>
+                <li class="course-item">CSS Training</li>
+            </ul>
+        </div>
+
+        <div class="course-category">
+            <h3>7. Data Warehousing</h3>
+            <ul class="course-list">
+                <li class="course-item">Informatica Certification Training</li>
+                <li class="course-item">Informatica MDM Training</li>
+                <li class="course-item">Big Data Hadoop Developer Training</li>
+                <li class="course-item">QlikView Training</li>
+                <li class="course-item">Datastage Training</li>
+                <li class="course-item">Pentaho Training</li>
+                <li class="course-item">OBIEE Certification Training</li>
+            </ul>
+        </div>
+
+        <div class="course-category">
+            <h3>8. Database Developer</h3>
+            <ul class="course-list">
+                <li class="course-item">MySQL Training</li>
+                <li class="course-item">MongoDB Training</li>
+                <li class="course-item">SQL Server DBA Training</li>
+                <li class="course-item">Apache Cassandra Training</li>
+                <li class="course-item">Teradata Training</li>
+                <li class="course-item">SQL Server Developer Training</li>
+            </ul>
+        </div>
+
+        <div class="course-category">
+            <h3>9. Robotic Process Automation</h3>
+            <ul class="course-list">
+                <li class="course-item">RPA Training</li>
+                <li class="course-item">Blue Prism Training</li>
+                <li class="course-item">UIPath Training</li>
+                <li class="course-item">Openspan Training</li>
+            </ul>
+        </div>
+
+        <div class="course-category">
+            <h3>10. Microsoft Training</h3>
+            <ul class="course-list">
+                <li class="course-item">Microsoft Azure Training</li>
+                <li class="course-item">Power BI Training</li>
+                <li class="course-item">Microsoft Dynamics CRM Training</li>
+                <li class="course-item">PowerShell Training</li>
+            </ul>
+        </div>
+
+        <div class="course-category">
+            <h3>11. Project Management</h3>
+            <ul class="course-list">
+                <li class="course-item">Primavera P6 Training</li>
+                <li class="course-item">Agile Training</li>
+                <li class="course-item">Microsoft Excel Training</li>
+                <li class="course-item">Scrum Master Training</li>
+            </ul>
+        </div>
+
+        <div class="course-category">
+            <h3>12. Other Training</h3>
+            <ul class="course-list">
+                <li class="course-item">Ethical Hacking Course</li>
+                <li class="course-item">Blockchain Training</li>
+                <li class="course-item">Digital Marketing Training</li>
+            </ul>
+        </div>
+
+    </section>
+    <footer>
+        &copy; 2023 HCTPL. All rights reserved.
+    </footer>
+</body>
+</html>

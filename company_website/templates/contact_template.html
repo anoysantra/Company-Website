@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Keep In Touch</h1>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+    </nav>
+
+    <section>
+        <form method="post" action="{% url 'review' %}">
+            {% csrf_token %}
+            <label for="id_name">Name:</label>
+            <input type="text" id="id_name" name="name" placeholder="Your Name" required>
+
+            <label for="id_email">Email:</label>
+            <input type="email" id="id_email" name="email" placeholder="Your Email" required>
+
+            <label for="id_phone_number">Phone Number:</label>
+            <input type="text" id="id_phone_number" name="phone_number" placeholder="Your Phone Number" required>
+
+            <label for="id_message">Message:</label>
+            <textarea id="id_message" name="message" placeholder="Your Message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        &copy; 2023 HCTPL. All rights reserved.
+    </footer>
+
+</body>
+</html>
